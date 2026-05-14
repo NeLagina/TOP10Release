@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Navbar from './components/navbar'
+import Navbar from './Navbar'
 import gtabanner from './assets/gta6.webp'
 import subnauticabanner from './assets/subnauticabanner.jpg'
 import BladesofFire from './assets/BladesofFire.png'
