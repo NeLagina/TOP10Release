@@ -15,9 +15,9 @@ function App() {
 
 
 
-  function Card({ title, banner, RealeaseDate, description }) {
+  function Card({ title, banner, RealeaseDate, description ,url}) {
 
-    return <>
+    return <a href={url}>
       <div className='bg rounded-[2vh]  mx-[3vw] drop-shadow-2xl hover:drop-shadow-indigo-500  hover:cursor-pointer'>
         <div className='bg-black rounded-[2vh]'>
           <img src={banner} className='rounded-[2vh]   opacity-80' alt={` ${title} Banner `} width="100%" height="60%" />
@@ -27,7 +27,7 @@ function App() {
               <h2 className='ml-[2vw] text-[3vh]'>Realease : {RealeaseDate}</h2>
         </div>
       </div>
-    </>
+    </a>
   }
 
 
@@ -39,16 +39,16 @@ function App() {
         <h1 className='text-center text-[8vh] pt-[2vh] text-shadow-amber-700'>Upcoming games</h1>
       </div>
       <div className="container w-fit mx-auto mt-3.5">
-        <Card banner={gtabanner} title="GTA IV" RealeaseDate="2026" description="decs" />
-        <Card banner={subnauticabanner} title="Subnautica 2" RealeaseDate="2026-05-14"  />
-        <Card banner={BladesofFire} title="Blades of Fire" RealeaseDate="2026-05-14"  />
-        <Card banner={ROGUETRIP} title="ROGUETRIP" RealeaseDate="2026-05-20" />
-        <Card banner={Mineralminingsimulator} title="Mineral Mining Simulator" RealeaseDate="2026-05-14" />
-        <Card banner={Whirlight} title="Whirlight - No Time To Trip" RealeaseDate="2026-05-14" />
-        <Card banner={DeadhausSonata} title="Deadhaus Sonata" RealeaseDate="2026-05-14" />
-        <Card banner={FoodProcessingSimulator} title="Food Processing Simulator" RealeaseDate="2026-05-14" />
-        <Card banner={MysteriesofOldTokyo} title="Mysteries of Old Tokyo" RealeaseDate="2026-05-14" />
-        <Card banner={Tindark} title="異変マチアプ - Tindark" RealeaseDate="2026-05-14"  />
+        <Card banner={gtabanner} url="/game/GTA_VI" title="GTA VI" RealeaseDate="2026" description="decs" />
+        <Card banner={subnauticabanner} url="/game/Subnautica2" title="Subnautica 2" RealeaseDate="2026-05-14"  />
+        <Card banner={BladesofFire} url="/game/BladesofFire" title="Blades of Fire" RealeaseDate="2026-05-14"  />
+        <Card banner={ROGUETRIP}  url="/game/ROGUETRIP" title="ROGUETRIP" RealeaseDate="2026-05-21" />
+        <Card banner={Mineralminingsimulator} url="/game/Mineralminingsimulator" title="Mineral Mining Simulator" RealeaseDate="2026-05-14" />
+        <Card banner={Whirlight}  url="/game/Whirlight" title="Whirlight - No Time To Trip" RealeaseDate="2026-05-14" />
+        <Card banner={DeadhausSonata}  url="/game/DeadhausSonata" title="Deadhaus Sonata" RealeaseDate="2026-05-14" />
+        <Card banner={FoodProcessingSimulator}  url="/game/FoodProcessingSimulator" title="Food Processing Simulator" RealeaseDate="2026-05-14" />
+        <Card banner={MysteriesofOldTokyo}  url="/game/MysteriesofOldTokyo" title="Mysteries of Old Tokyo" RealeaseDate="2026-05-14" />
+        <Card banner={Tindark}  url="/game/Tindark" title="異変マチアプ - Tindark" RealeaseDate="2026-05-14"  />
         
       </div>
     </div>
