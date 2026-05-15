@@ -18,12 +18,12 @@ function App() {
   function Card({ title, banner, RealeaseDate, description ,url}) {
 
     return <a href={url} className=''>
-      <div className='bg md:w-[30vw] rounded-[2vh] mx-[1vw] drop-shadow-2xl hover:drop-shadow-indigo-500  hover:cursor-pointer'>
+      <div className='bg lg:w-[30vw] rounded-[2vh] mx-[1vw] drop-shadow-2xl hover:drop-shadow-indigo-500  hover:cursor-pointer'>
         <div className='bg-black rounded-[2vh]'>
-          <img src={banner} className='rounded-[2vh] opacity-80' alt={` ${title} Banner `} width="100%" height="60%" />
+          <img src={banner} className='rounded-[2vh] opacity-80 w-full h-[30vh]' alt={` ${title} Banner `} width="100%" height="60%" />
         </div>
         <div className='relative top-[-8vh] pb-[2vh] min- bg-cyan-800 rounded-b-[2vh] '>
-              <h2 className='rounded-[1vh] ml-[2vw] text-[5vh] '>{title}</h2>
+              <h2 className='rounded-[1vh] ml-[2vw] text-[3vh] '>{title}</h2>
               <h2 className='ml-[2vw] text-[3vh]'>Realease : {RealeaseDate}</h2>
         </div>
       </div>
