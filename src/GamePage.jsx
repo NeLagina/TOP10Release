@@ -154,13 +154,13 @@ function GamePage() {
   return (
     <div className='pb-[5vh]'>
       <Navbar />
-      <div className='w-[50vw] h-fit mx-auto mt-[5vh] px-[2vw] py-[2vh] bg-blue-700/80 rounded-[2vh]'>
+      <div className='md:w-[50vw] h-fit mx-auto mt-[5vh] px-[2vw] py-[2vh] bg-blue-700/80 rounded-[2vh]'>
       <h1 className='text-center text-[4vh]'>COMING {gamelist[id].release ? gamelist[id].release : "soon"}</h1>
         <img  className="w-fit h-fit mx-auto" src={banner} alt={'banner of ${title}'} />
         <h1 className='text-center text-[4vh]'>{title}</h1>
         <p className='text-center text-[2vh]'> {description}</p>      
       </div>
-      <div className='mx-[16vw] h-full m mt-[5vh] px-[2vw] py-[2vh] bg-blue-700/80 rounded-[2vh] mb-2vh'>
+      <div className='md:mx-[16vw] mx-[8vw] h-full m mt-[5vh] px-[2vw] py-[2vh] bg-blue-700/80 rounded-[2vh] mb-2vh'>
             <h1 className='text-center text-[5vh]'>Game photos</h1>
             
             <div className='flex flex-wrap justify-center w-full '>{gamelist[id].showcase.map((photo) => <a href={photo} target='_blank' ><img src={photo} className='mx-[1vw] my-[1vh] hover:drop-shadow-indigo-500 rounded-[1vh]  drop-shadow-2xl  hover:cursor-pointer' key={photo} alt={`${title} photo banner`} /> </a>)}</div> 
